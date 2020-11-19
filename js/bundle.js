@@ -427,15 +427,6 @@ $( document ).ready(function() {
       var pos = Math.round(viewportHeight/2 - $(item).height()/2);
       $(item).css('top', pos);
     });
-
-    //img switch for food security graphic
-    var controller = new ScrollMagic.Controller();
-    var pinScene = new ScrollMagic.Scene({
-      triggerElement: "#slide2",
-      triggerHook: 0.6
-    })
-    .setClassToggle("#pinFoodInsecurity", "showSlide2")
-    .addTo(controller);
   }
 
 
