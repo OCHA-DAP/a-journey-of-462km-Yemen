@@ -352,19 +352,19 @@ $( document ).ready(function() {
     });
 
     //auto play/pause video
-    var vid = document.getElementById('icrcVideo');
-    var videoScene = new ScrollMagic.Scene({
-      triggerElement: "#icrcVideo",
-      triggerHook: 'onEnter', 
-      duration: '100%'
-    })
-    .addTo(controller)
-    .on('enter', function(e) {
-      vid.play();
-    })
-    .on('leave', function(e) {
-      vid.pause();
-    });
+    // var vid = document.getElementById('icrcVideo');
+    // var videoScene = new ScrollMagic.Scene({
+    //   triggerElement: "#icrcVideo",
+    //   triggerHook: 'onEnter', 
+    //   duration: '100%'
+    // })
+    // .addTo(controller)
+    // .on('enter', function(e) {
+    //   vid.play();
+    // })
+    // .on('leave', function(e) {
+    //   vid.pause();
+    // });
 
 
     var total = 50;
