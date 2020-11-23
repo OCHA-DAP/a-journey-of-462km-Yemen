@@ -1535,7 +1535,8 @@ figure p {
     font-size: 19px; }
   article {
     margin-left: auto;
-    width: 88%; }
+    width: 88%;
+    z-index: 1; }
   .logos {
     top: 25px;
     text-align: center;
