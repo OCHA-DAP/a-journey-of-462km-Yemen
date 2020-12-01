@@ -90,12 +90,12 @@ const config = {
 
 // generic window resize listener event
 function handleResize() {
-  // 1. update height of step elements
-  var stepH = Math.floor(window.innerHeight);
+  //update height of step elements
+  var stepH = (isMobile) ? Math.floor(window.innerHeight)*2 : Math.floor(window.innerHeight);
   step.style("height", stepH + "px");
 
   //double height of last step
-  $(".step[data-step='4']").css("height", stepH*1.5 + "px");
+  if (!isMobile) $(".step[data-step='4']").css("height", stepH*1.5 + "px");
 
   var figureHeight = window.innerHeight;
   var figureMarginTop = (window.innerHeight - figureHeight) / 2;
@@ -145,7 +145,7 @@ function initSlideshow() {
       .addTo(controller);
   }
 }
-var map, scroller, main, scrolly, figure, article, step, geoDataArray, viewportWidth, viewportHeight;
+var map, scroller, main, scrolly, figure, article, step, geoDataArray, viewportWidth, viewportHeight, isMobile;
 var currentIndex = 1;
 // var layerTypes = {
 //   'fill': ['fill-opacity'],
@@ -159,12 +159,12 @@ var currentIndex = 1;
 
 $( document ).ready(function() {
   const DATA_URL = 'data/';
-  var isMobile = $(window).width()<600? true : false;
   var dataUrls = ['route1.geojson', 'route2.geojson', 'route3.geojson'];
   geoDataArray = new Array(dataUrls.length);
   mapboxgl.accessToken = 'pk.eyJ1IjoiaHVtZGF0YSIsImEiOiJja2FvMW1wbDIwMzE2MnFwMW9teHQxOXhpIn0.Uri8IURftz3Jv5It51ISAA';
   viewportWidth = window.innerWidth;
   viewportHeight = window.innerHeight;
+  isMobile = (viewportWidth<767) ? true : false;
   
   function getData() {
     dataUrls.forEach(function (url, index) {
