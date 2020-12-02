@@ -429,7 +429,6 @@ $( document ).ready(function() {
     });
   }
 
-
   function handleStepEnter(response) {
     currentIndex = response.index;
     var chapter = config.chapters[currentIndex];
