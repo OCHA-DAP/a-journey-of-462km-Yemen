@@ -410,7 +410,8 @@ figure p {
 			position: -webkit-sticky;
 			position: sticky;
 			top: 0;
-			img {
+			img,
+			video {
 				display: block;
 		    height: 100% !important;
 		    left: 50%;
