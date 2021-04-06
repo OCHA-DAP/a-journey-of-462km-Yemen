@@ -1467,7 +1467,8 @@ figure p {
     position: -webkit-sticky;
     position: sticky;
     top: 0; }
-    #slideshow .slide-container .pin-item img {
+    #slideshow .slide-container .pin-item img,
+    #slideshow .slide-container .pin-item video {
       display: block;
       height: 100% !important;
       left: 50%;
